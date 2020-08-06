@@ -25,8 +25,7 @@ class AlertLogsController < ApplicationController
   # POST /alert_logs
   # POST /alert_logs.json
   def create
-    binding.pry
-    @alert_log = AlertLog.new(alert_log_params)
+    @alert_log = AlertLog.new({ message: params.to_json })
 
     respond_to do |format|
       if @alert_log.save
