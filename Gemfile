@@ -39,3 +39,4 @@ gem 'puma'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+gem 'pry', '~> 0.12.2'
