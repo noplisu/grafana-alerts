@@ -14,13 +14,8 @@
       <tr>
         <td><%= alert_log.message && JSON.parse(alert_log.message)["message"] %></td>
         <td><%= link_to 'Show', alert_log %></td>
-        <td><%= link_to 'Edit', edit_alert_log_path(alert_log) %></td>
         <td><%= link_to 'Destroy', alert_log, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Alert Log', new_alert_log_path %>
