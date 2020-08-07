@@ -11,6 +11,9 @@ class AlertLogsController < ApplicationController
   # GET /alert_logs/1
   # GET /alert_logs/1.json
   def show
+    binding.pry
+    parsed = JSON.parse @alert_log.message
+    @beautifiedJson = JSON.pretty_generate parsed
   end
 
   # GET /alert_logs/new
